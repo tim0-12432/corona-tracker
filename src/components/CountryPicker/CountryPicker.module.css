@@ -1,0 +1,31 @@
+.forms {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.formControl {
+    width: 30%;
+    margin-bottom: 30px !important;
+}
+.searchBar {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchBar > div:first-child {
+    flex: 1;
+}
+
+@media (max-width: 770px) {
+    .forms {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .formControl {
+        width: 80%;
+    }
+}

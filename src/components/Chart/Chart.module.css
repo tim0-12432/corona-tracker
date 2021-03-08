@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+}
+.formControl {
+    width: 30%;
+    margin-bottom: 30px !important;
+    margin-top: 15px !important;
+}
+
+@media (max-width: 770px) {
+    .container {
+        width: 100%;
+    }
+    .formControl {
+        width: 80%;
+    }
+}
