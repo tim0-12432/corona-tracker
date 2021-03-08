@@ -19,7 +19,6 @@ const CountryPicker = ({ handleCountryChange, country, handleDistrictChange, dis
     }, [setCountries]);
 
     function getDefaultPick() {
-        console.log(country);
         return country;
     }
 
@@ -41,7 +40,6 @@ const CountryPicker = ({ handleCountryChange, country, handleDistrictChange, dis
     if (!countries) {
         return "Loading..."
     }
-    console.log(district);
     return (
         <div className={ styles.forms }>
             <FormControl className={ styles.formControl }>

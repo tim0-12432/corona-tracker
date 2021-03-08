@@ -23,7 +23,6 @@ export default class App extends Component {
             this.saveCountry();
         } else {
             this.setState({ country: this.getCountry() });
-            console.log(this.state.country, this.getCountry());
         }
         this.setState({ country: "DE" });
         const fetchedData = await fetchData();
@@ -32,7 +31,8 @@ export default class App extends Component {
     }
 
     saveCountry = () => {
-        localStorage.setItem("covid19.country", this.state.country);
+        //localStorage.setItem("covid19.country", this.state.country);
+        console.log("Cool!");
     };
     getCountry = () => {
         return localStorage.getItem("covid19.country");
