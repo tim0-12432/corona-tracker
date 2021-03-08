@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Line, Bar } from "react-chartjs-2";
 import { FormControl, Button } from "@material-ui/core";
 
+import Loading from "./../Loading/Loading";
 import styles from "./Chart.module.css";
 
 const Chart = ({ data, dailyData, country, district }) => {
@@ -28,7 +29,7 @@ const Chart = ({ data, dailyData, country, district }) => {
                 fill: true
             }] }}
         />)
-        : "Loading..."
+        : <Loading />
     );
 
     const barChart = (
@@ -57,7 +58,7 @@ const Chart = ({ data, dailyData, country, district }) => {
                 }}
             />
         )
-        : "Loading..."
+        : <Loading />
     );
 
     return (

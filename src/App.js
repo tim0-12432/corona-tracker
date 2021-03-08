@@ -5,6 +5,7 @@ import Cards from "./components/Cards/Cards";
 import Chart from "./components/Chart/Chart";
 import CountryPicker from "./components/CountryPicker/CountryPicker";
 import Map from "./components/Map/Map";
+import Loading from "./components/Loading/Loading";
 import styles from "./App.module.css";
 
 import { fetchData, fetchDailyData } from "./api";
@@ -58,7 +59,7 @@ export default class App extends Component {
 
         if (data === undefined || !data.cases || country === "germany") {
             return (<div className={ styles.container }>
-                <Typography variant="h5">Loading...</Typography>
+                <Loading />
             </div>)
         }
         return (
@@ -71,8 +72,8 @@ export default class App extends Component {
                 <Chart data={ data } dailyData={ daily } country={ country } district={ district } />
                 <Map district={ district } />
                 <footer>
-                    <Typography variant="body2" className={ styles.footer }>All values are provided by the { data.meta.source }</Typography>
-                    <Typography variant="body2" className={ styles.footer }>API for better usage by { data.meta.contact }</Typography>
+                    <Typography variant="body2" className={ styles.footer }>All values are provided by the Robert Koch-Institut</Typography>
+                    <Typography variant="body2" className={ styles.footer }>API for better usage by Marlon Lueckert (m.lueckert@me.com)</Typography>
                 </footer>
             </div>
         );

@@ -3,6 +3,7 @@ import { NativeSelect, FormControl, TextField, IconButton } from "@material-ui/c
 import SearchIcon from "@material-ui/icons/Search";
 import ClearIcon from "@material-ui/icons/Clear";
 
+import Loading from "./../Loading/Loading";
 import styles from "./CountryPicker.module.css";
 
 import { fetchStates, fetchDistricts } from "./../../api";
@@ -38,7 +39,7 @@ const CountryPicker = ({ handleCountryChange, country, handleDistrictChange, dis
     }
     
     if (!countries) {
-        return "Loading..."
+        return <Loading />
     }
     return (
         <div className={ styles.forms }>

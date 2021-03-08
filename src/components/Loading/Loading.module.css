@@ -1,0 +1,17 @@
+.loading {
+    height: 100px;
+    width: 100px;
+    animation: turning 3s linear infinite;
+}
+.loading > img {
+    width: 100%;
+    height: 100%;
+}
+@keyframes turning {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

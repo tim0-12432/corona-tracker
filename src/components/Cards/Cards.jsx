@@ -3,11 +3,12 @@ import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 import CountUp from "react-countup";
 import cx from "classnames";
 
+import Loading from "./../Loading/Loading";
 import styles from "./Cards.module.css";
 
 const Cards = ({ data }) => {
     if (!data.cases) {
-        return "Loading..."
+        return <Loading />
     }
     return (
         <div className={ styles.container }>
