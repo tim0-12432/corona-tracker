@@ -68,7 +68,7 @@ export const fetchDailyData = async (country) => {
                 recoverUrl = `${url}states/${country}/history/recovered`;
                 deathUrl = `${url}states/${country}/history/deaths`;
             }
-            
+
             const cases = await axios.get(caseUrl);
             const recovered = await axios.get(recoverUrl);
             const deaths = await axios.get(deathUrl);
@@ -148,6 +148,32 @@ export const fetchDistricts = async (text) => {
                 }
             }
             return NaN;
+        } else {
+            throw {name: "ResponseError", message: "GET Request returned not okay", toString: function() {return this.name + ": " + this.message;}};
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+export const fetchVaccData = async () => {
+    try {
+        const response = await axios.get(`${url}vaccinations`);
+        if (response.status === 200) {
+            return response.data;
+        } else {
+            throw {name: "ResponseError", message: "GET Request returned not okay", toString: function() {return this.name + ": " + this.message;}};
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+export const fetchDailyVaccData = async () => {
+    try {
+        const response = await axios.get(`${url}vaccinations/history`);
+        if (response.status === 200) {
+            return response.data.data.history;
         } else {
             throw {name: "ResponseError", message: "GET Request returned not okay", toString: function() {return this.name + ": " + this.message;}};
         }
