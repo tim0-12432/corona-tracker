@@ -43,7 +43,7 @@ export default class Vaccinations extends Component {
                 <Typography variant="h1" className={ styles.headline }>Vaccinations</Typography>
                 <Selector country={ country } handleCountryChange={ this.handleCountryChange } />
                 <Cards data={ country === "DE" ? data.data : data.data.states[country] } meta={ data.meta } />
-                <Chart />
+                <Chart dailyData={ daily } country={ country } />
                 <footer>
                     <Typography variant="body2" className={ styles.footer }>All values are provided by the Robert Koch-Institut</Typography>
                     <Typography variant="body2" className={ styles.footer }>API for better usage by Marlon Lueckert (m.lueckert@me.com)</Typography>

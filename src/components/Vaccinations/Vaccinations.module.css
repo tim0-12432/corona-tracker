@@ -39,6 +39,11 @@ footer {
     width: 100%;
     margin: 20px 0;
 }
+.chartBigContainer {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+}
 .link {
     position: fixed;
     bottom: 10px;
@@ -58,6 +63,9 @@ footer {
 @media (max-width: 770px) {
     .container {
         margin: 0;
+    }
+    .chartBigContainer {
+        width: 100%;
     }
     .headline {
         font-weight: 700;
