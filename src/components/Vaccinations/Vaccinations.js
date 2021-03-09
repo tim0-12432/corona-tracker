@@ -38,7 +38,7 @@ export default class Vaccinations extends Component {
         }
         return (
             <div className={ styles.container }>
-                <a href="/" className={ styles.link }>Vaccinations</a>
+                <a href="/corona-tracker/" className={ styles.link }>Vaccinations</a>
                 <Typography variant="h1" className={ styles.headline }>Vaccinations</Typography>
                 <Selector country={ country } handleCountryChange={ this.handleCountryChange } />
                 <Cards data={ country === "DE" ? data.data : data.data.states[country] } meta={ data.meta } />

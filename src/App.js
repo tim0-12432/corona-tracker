@@ -64,7 +64,7 @@ export default class App extends Component {
         }
         return (
             <div className={ styles.container }>
-                <a href="/vaccinations" className={ styles.link }>Vaccinations</a>
+                <a href="/corona-tracker/vaccinations" className={ styles.link }>Vaccinations</a>
                 <Typography variant="h1" className={ styles.headline }>Corona Tracker</Typography>
                 <Cards data={ data } />
                 <CountryPicker handleCountryChange={ this.handleCountryChange } country={ country }

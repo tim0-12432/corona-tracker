@@ -67,10 +67,10 @@ function Cards({ data, meta }) {
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>{ data.name ? data.name : "Germany" }</Typography>
                         <Typography variant="h6">
-                            First Quote:<br/>1 / <CountUp start={ 0 } end={ data.quote * 100 } duration={ 2.5 } separator="." />
+                            First Quote:<br/><CountUp start={ 0 } end={ data.quote * 100 } duration={ 2.5 } separator="." /> / 100
                         </Typography>
                         <Typography variant="h6">
-                            Second Quote:<br/>1 / <CountUp start={ 0 } end={ data.secondVaccination.quote * 100} duration={ 2.5 } separator="." />
+                            Second Quote:<br/><CountUp start={ 0 } end={ data.secondVaccination.quote * 100} duration={ 2.5 } separator="." /> / 100
                         </Typography>
                         <Typography color="textSecondary">{ new Date(meta.lastUpdate).toDateString() }</Typography>
                         <Typography variant="body2">Additional Information</Typography>
