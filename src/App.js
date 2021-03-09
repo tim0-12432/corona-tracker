@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 
 import Cards from "./components/Cards/Cards";
@@ -64,7 +65,7 @@ export default class App extends Component {
         }
         return (
             <div className={ styles.container }>
-                <a href="/corona-tracker/vaccinations" className={ styles.link }>Vaccinations</a>
+                <Link to="/corona-tracker/vaccinations" className={ styles.link }>Vaccinations</Link>
                 <Typography variant="h1" className={ styles.headline }>Corona Tracker</Typography>
                 <Cards data={ data } />
                 <CountryPicker handleCountryChange={ this.handleCountryChange } country={ country }

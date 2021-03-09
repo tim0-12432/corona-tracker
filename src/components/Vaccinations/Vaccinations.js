@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 
 import Loading from "./../Loading/Loading";
@@ -38,7 +39,7 @@ export default class Vaccinations extends Component {
         }
         return (
             <div className={ styles.container }>
-                <a href="/corona-tracker/" className={ styles.link }>Vaccinations</a>
+                <Link to="/corona-tracker/" className={ styles.link }>Corona Tracker</Link>
                 <Typography variant="h1" className={ styles.headline }>Vaccinations</Typography>
                 <Selector country={ country } handleCountryChange={ this.handleCountryChange } />
                 <Cards data={ country === "DE" ? data.data : data.data.states[country] } meta={ data.meta } />
