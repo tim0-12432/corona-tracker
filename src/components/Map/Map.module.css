@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     width: 85%;
+    margin-bottom: 30px;
 }
 .image {
     max-height: 100vh;

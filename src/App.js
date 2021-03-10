@@ -6,6 +6,7 @@ import Cards from "./components/Cards/Cards";
 import Chart from "./components/Chart/Chart";
 import CountryPicker from "./components/CountryPicker/CountryPicker";
 import Map from "./components/Map/Map";
+import Projection from "./components/Chart/Projection";
 import Loading from "./components/Loading/Loading";
 import styles from "./App.module.css";
 
@@ -73,6 +74,7 @@ export default class App extends Component {
                 />
                 <Chart data={ data } dailyData={ daily } country={ country } district={ district } />
                 <Map district={ district } />
+                <Projection />
                 <footer>
                     <Typography variant="body2" className={ styles.footer }>All values are provided by the Robert Koch-Institut</Typography>
                     <Typography variant="body2" className={ styles.footer }>API for better usage by Marlon Lueckert (m.lueckert@me.com)</Typography>

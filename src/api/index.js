@@ -73,7 +73,7 @@ export const fetchDailyData = async (country) => {
             const recovered = await axios.get(recoverUrl);
             const deaths = await axios.get(deathUrl);
             const response = [];
-            if (cases.status === 200 ){//&& recovered.status === 200 && deaths.status === 200) {
+            if (cases.status === 200 && recovered.status === 200 && deaths.status === 200) {
                 for (let index = 0; index < cases.data.data[country].history.length; index++) {
                     const caseX = cases.data.data[country].history[index].cases;
                     const recover = recovered.data.data[country].history[index].recovered;
@@ -174,6 +174,19 @@ export const fetchDailyVaccData = async () => {
         const response = await axios.get(`${url}vaccinations/history`);
         if (response.status === 200) {
             return response.data.data.history;
+        } else {
+            throw {name: "ResponseError", message: "GET Request returned not okay", toString: function() {return this.name + ": " + this.message;}};
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+export const fetchDailyCases = async () => {
+    try {
+        const cases = await axios.get(`${url}germany/history/cases`);
+        if (cases.status === 200) {
+            return cases.data.data;
         } else {
             throw {name: "ResponseError", message: "GET Request returned not okay", toString: function() {return this.name + ": " + this.message;}};
         }

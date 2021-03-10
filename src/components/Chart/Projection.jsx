@@ -1,0 +1,68 @@
+import React, { useState, useEffect } from "react";
+import { Line } from "react-chartjs-2";
+import { Typography } from "@material-ui/core";
+
+import Loading from "./../Loading/Loading";
+import styles from "./Chart.module.css";
+
+import { fetchData, fetchDailyCases } from "./../../api";
+
+const Projection = () => {
+    const [data, setData] = useState({});
+    const [daily, setDaily] = useState([]);
+    const [projection, setProjection] = useState([]);
+
+    useEffect(() => {
+        const fetchApi = async () => {
+            setData(await fetchData());
+            setDaily(await fetchDailyCases());
+        }
+        fetchApi();
+    }, []);
+    useEffect(() => {
+        if (data && data.r !== undefined && daily.length !== 0) {
+            const copy = daily;
+            const date = new Date(copy[copy.length - 1].date);
+            for (let i = 0; i < 100; i++) {
+                if (copy[copy.length - 1].cases !== 0) {
+                    const object = {
+                        cases: parseInt(copy[copy.length - 1].cases * data.r.value),
+                        date: new Date(date.setDate(date.getDate() + 1)).toISOString()
+                    };
+                    copy.push(object);
+                }
+            }
+            setProjection(copy);
+        }
+    }, [daily]);
+
+
+    const lineChart = (
+        (projection && projection.length !== 0)
+        ? (<Line
+            data={{ labels: projection.map(({ date }) => new Date(date).toDateString()),
+            datasets: [{
+                data: projection.map(({ cases }) => cases),
+                label: "Infected",
+                borderColor: "#ff3333",
+                fill: true
+            }] }}
+            options={{
+                legend: { display: false },
+                title: { display: true, text: `Current reproduction rate (R-value): ${data.r.value}` }
+            }}
+        />)
+        : <Loading />
+    );
+
+    return (
+        <>
+            <Typography variant="h4">Future projection for Germany</Typography>
+            <div className={ styles.container }>
+                { lineChart }
+            </div>
+        </>
+    );
+}
+
+export default Projection;
