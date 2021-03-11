@@ -22,11 +22,12 @@ const Projection = () => {
     useEffect(() => {
         if (data && data.r !== undefined && daily.length !== 0) {
             const copy = daily;
+            const r = data.r.value;
             const date = new Date(copy[copy.length - 1].date);
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < (r > 1 ? 50 : 100); i++) {
                 if (copy[copy.length - 1].cases !== 0) {
                     const object = {
-                        cases: parseInt(copy[copy.length - 1].cases * data.r.value),
+                        cases: parseInt(copy[copy.length - 1].cases * r),
                         date: new Date(date.setDate(date.getDate() + 1)).toISOString()
                     };
                     copy.push(object);

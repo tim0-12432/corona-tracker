@@ -5,7 +5,7 @@ import styles from "./Map.module.css";
 const Map = ({ district }) => {
     function getSource() {
         if (district !== "") {
-            return "https://api.corona-zahlen.org/map/districts";
+            return "https://rki.marlon-lueckert.de/api/districts-map?transparent";
         } else {
             return "https://api.corona-zahlen.org/map/states";
         }
