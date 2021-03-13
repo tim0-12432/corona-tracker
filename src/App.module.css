@@ -24,7 +24,7 @@ footer {
     margin: 30px 0;
     padding: 0 20px;
 }
-.link {
+.link1 {
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -37,12 +37,33 @@ footer {
     border-radius: 5px;
     border: 3px solid #8dd35f;
 }
-.link:hover, .link:focus {
+.link1:hover, .link1:focus {
+    color: white;
+    background-color: #8dd35f;
+}
+
+.link2 {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: .3s ease;
+    border-radius: 5px;
+    border: 3px solid #8dd35f;
+}
+.link2:hover, .link2:focus {
     color: white;
     background-color: #8dd35f;
 }
 
 @media (max-width: 770px) {
+    .link1, .link2 {
+        max-width: 40%;
+    }
     .container {
         margin: 0;
     }
