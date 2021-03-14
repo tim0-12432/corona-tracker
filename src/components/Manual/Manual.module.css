@@ -39,6 +39,10 @@ body {
     text-decoration: none;
     padding: 5px 10px;
 }
+.markdown img {
+    max-width: 100%;
+    border-radius: 10px;
+}
 .link, .github {
     position: fixed;
     font-weight: 600;
