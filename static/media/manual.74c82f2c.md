@@ -17,7 +17,7 @@ Call webpage on [https://tim0-12432.github.io/corona-tracker](https://tim0-12432
 #### App layout:
 |Windows|android|iOS, OSX|
 |---|---|---|
-|Open webpage in Edge and click on "Install as app" in the settings (Does only work with Edge) ![edge](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/edge-app.JPG)|Open webpage and click on "Add to Homescreen" in the settings (Works with nearly every browser based on Chromium) ![chromium](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/chromium-app.jpeg)|Do not use apple products!|
+|Open webpage in Edge and click on "Install as app" in the settings (Does only work with Edge) ![edge](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/edge-app.JPG?raw=true)|Open webpage and click on "Add to Homescreen" in the settings (Works with nearly every browser based on Chromium) ![chromium](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/chromium-app.jpeg?raw=true)|Do not use apple products!|
 
 
 ---
@@ -30,50 +30,50 @@ Call webpage on [https://tim0-12432.github.io/corona-tracker](https://tim0-12432
 - deaths + current death delta
 - current weekly incidence
 - cases per 100 thousand people
-- ![cards](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/cards.JPG)
+- ![cards](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/cards.JPG?raw=true)
 
 #### State selection
 - all German states including the whole German country
-- ![states](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/states.JPG)
+- ![states](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/states.JPG?raw=true)
 
 #### District search
 - all German districts (searchbar is not case-sensitive)
 - if your need a specific "Landkreis" type "LK" before the name otherwise the appropriate city will being chosen when existing
-- ![district](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/districts.JPG)
+- ![district](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/districts.JPG?raw=true)
 
 #### Line chart
 - shows the historical progression of cases, recovers and deaths for the chosen state or district
-- ![linechart](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/line.JPG)
+- ![linechart](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/line.JPG?raw=true)
 
 #### Bar chart
 - sets the values of cases, recovers and deaths for the chosen state or district in relation to each other
-- ![barchart](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/bar.JPG)
+- ![barchart](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/bar.JPG?raw=true)
 
 #### Map
 - shows the current incidence heat map for Germany
-- ![incidence heatmap](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/map.JPG)
+- ![incidence heatmap](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/map.JPG?raw=true)
 
 #### Future projection
 - shows the historical progression of cases for Germany and a possible future progression calculated out of the R-value shown
-- ![future projection](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/future.JPG)
+- ![future projection](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/future.JPG?raw=true)
 
 ---
 ### Vaccination
 
 #### State selection
 - all German states including the whole German country
-- ![states](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/states2.JPG)
+- ![states](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/states2.JPG?raw=true)
 
 #### Count cards based on chosen state
 - vaccination + current vaccination delta
 - second vaccination + current second vaccination delta
 - parts of the different companies
 - proportion of the vaccinated people to the other people
-- ![cards](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/cards2.JPG)
+- ![cards](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/cards2.JPG?raw=true)
 
 #### Line chart
 - shows the historical progression of vaccinations and second vaccinations for Germany
-- ![linechart](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/line2.JPG)
+- ![linechart](https://github.com/tim0-12432/corona-tracker/blob/main/src/docs/line2.JPG?raw=true)
 
 ---
 
