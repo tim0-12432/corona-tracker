@@ -62,6 +62,10 @@ export default class App extends Component {
         if (data === undefined || !data.cases || country === "germany") {
             return (<div className={ styles.container }>
                 <Loading />
+                { data?.error && data.error.message
+                ? <Typography variant="body2">{ data.error.message }</Typography>
+                : null
+                }
             </div>)
         }
         return (
