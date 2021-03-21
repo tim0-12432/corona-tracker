@@ -1,5 +1,8 @@
 # COVID-19 Tracker <img align="center" alt="App logo" width="26px" src="https://github.com/tim0-12432/corona-tracker/blob/b6745f2f5b9c2f325f8fb7f0c6fc43f70506bf0c/src/images/virus.png" />
 
+![GitHub last commit](https://img.shields.io/github/last-commit/tim0-12432/corona-tracker?logo=github&color=green)
+![Website](https://img.shields.io/website?down_color=red&down_message=offline&label=webpage&up_color=green&up_message=online&url=https%3A%2F%2Ftim0-12432.github.io%2Fcorona-tracker)
+
 ### Fair Use
 - Data from [Robert Koch-Institut](https://www.rki.de/DE/Content/Infekt/SurvStat/survstat_node.html)
 - API made by [Marlon Lueckert](https://github.com/marlon360/rki-covid-api)
