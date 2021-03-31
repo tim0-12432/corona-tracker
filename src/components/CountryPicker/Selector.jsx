@@ -25,7 +25,7 @@ const Selector = ({ handleCountryChange, country }) => {
     }
     return (
         <FormControl className={ styles.formControl }>
-            <NativeSelect value={ getDefaultPick() } onChange={ (e) => handleCountryChange(e.target.value) }>
+            <NativeSelect value={ getDefaultPick() } classes={{ root: styles.sclt, icon: styles.icn }} onChange={ (e) => handleCountryChange(e.target.value) }>
                 <option value="DE" key="DE">Germany</option>
                 {
                     countries.map((item) => {

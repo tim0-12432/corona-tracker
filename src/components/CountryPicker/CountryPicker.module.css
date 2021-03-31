@@ -9,6 +9,21 @@
     width: 30%;
     margin-bottom: 30px !important;
 }
+.sclt {
+    color: var(--color-font) !important;
+}
+.icn {
+    fill: var(--color-font) !important;
+}
+.inpt > label, .inpt > div {
+    color: var(--color-font) !important;
+}
+.inpt > div > fieldset {
+    border-color: var(--color-light) !important;
+}
+.lbl {
+    color: var(--color-font) !important;
+}
 .searchBar {
     padding: 0;
     width: 100%;

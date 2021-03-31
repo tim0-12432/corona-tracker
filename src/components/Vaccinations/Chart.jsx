@@ -4,8 +4,6 @@ import Loading from "./../Loading/Loading";
 import styles from "./Vaccinations.module.css";
 
 function Chart({ dailyData, country }) {
-    console.log(dailyData);
-
     const lineChart = (
         ((dailyData && dailyData.length !== 0) || country === "germany")
         ? (<Line
@@ -13,12 +11,12 @@ function Chart({ dailyData, country }) {
             datasets: [{
                 data: dailyData.map(({ firstVaccination }) => firstVaccination),
                 label: "Vaccinated once",
-                borderColor: "#ffff33",
+                borderColor: "#D2AC4B",
                 fill: true
             }, {
                 data: dailyData.map(({ secondVaccination }) => secondVaccination),
                 label: "Vaccinated twice",
-                borderColor: "#33ff33",
+                borderColor: "#8cb369",
                 fill: true
             }] }}
         />)

@@ -20,7 +20,7 @@ const Projection = () => {
         fetchApi();
     }, []);
     useEffect(() => {
-        if (data && data.r !== undefined && daily.length !== 0) {
+        if (data && daily && data.r !== undefined && daily.length !== 0) {
             const copy = daily;
             const r = data.r.value;
             const date = new Date(copy[copy.length - 1].date);
@@ -45,7 +45,7 @@ const Projection = () => {
             datasets: [{
                 data: projection.map(({ cases }) => cases),
                 label: "Infected",
-                borderColor: "#ff3333",
+                borderColor: "#bc4b51",
                 fill: true
             }] }}
             options={{

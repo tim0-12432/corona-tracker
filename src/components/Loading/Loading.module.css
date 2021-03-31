@@ -1,17 +1,42 @@
 .loading {
     height: 100px;
     width: 100px;
-    animation: turning 3s linear infinite;
+    animation: rotating 3s linear infinite;
 }
-.loading > img {
+.loading > svg {
     width: 100%;
     height: 100%;
+    display: grid;
+    place-content: center;
+    overflow: visible;
+    margin: 10px 20px;
 }
-@keyframes turning {
+.inner > circle {
+    fill: none;
+    stroke: #8dd35f;
+    stroke-width: 1;
+}
+.outer {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #8dd35f;
+    stroke-width: 2;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: dashing 3s ease-in-out alternate-reverse infinite;
+}
+@keyframes rotating {
     0% {
         transform: rotateZ(0deg);
     }
     100% {
         transform: rotateZ(360deg);
+    }
+}
+
+@keyframes dashing {
+    100% {
+        stroke-dashoffset: 0;
     }
 }

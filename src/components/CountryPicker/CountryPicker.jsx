@@ -12,10 +12,7 @@ const CountryPicker = ({ handleCountryChange, country, handleDistrictChange, dis
     const [textField, setTextField] = useState(district);
 
     async function handleTextFieldSubmit() {
-        if (district !== "") {
-            setDistrict("");
-            setTextField("");
-        } else {
+        if (textField !== "") {
             const result = await fetchDistricts(textField)
             if (result !== "NaN") {
                 handleDistrictChange(result);
@@ -31,9 +28,9 @@ const CountryPicker = ({ handleCountryChange, country, handleDistrictChange, dis
             <Selector handleCountryChange={ handleCountryChange } country={ country } />
             <FormControl className={ styles.formControl }>
                 <div className={ styles.searchBar }>
-                    <TextField id="outlined-search" label="Search for district" type="search" variant="outlined" value={ textField } onChange={ (e) => setTextField(e.target.value) } />
-                    <IconButton aria-label="search" onClick={ handleTextFieldSubmit }>
-                        { district === "" ? <SearchIcon /> : <ClearIcon /> }
+                    <TextField classes={{ root: styles.inpt }} id="outlined-search" label="Search for district" type="search" variant="outlined" value={ textField } onChange={ (e) => setTextField(e.target.value) } />
+                    <IconButton classes={{ label: styles.lbl }} aria-label="search" onClick={ handleTextFieldSubmit }>
+                        <SearchIcon />
                     </IconButton>
                 </div>
             </FormControl>

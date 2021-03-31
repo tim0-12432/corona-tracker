@@ -3,6 +3,9 @@
     justify-content: center;
     width: 85%;
     margin-bottom: 30px;
+    background-color: var(--color-light);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 .image {
     max-height: 100vh;

@@ -31,6 +31,10 @@ export default class App extends Component {
         const fetchedData = await fetchData();
         const fetchedDailyData = await fetchDailyData();
         this.setState({ data: fetchedData, daily: fetchedDailyData });
+
+        console.groupCollapsed("Surprise!");
+        console.log("Congratulations! You found me!");
+        console.groupEnd();
     }
 
     saveCountry = () => {
@@ -63,7 +67,7 @@ export default class App extends Component {
             return (<div className={ styles.container }>
                 <Loading />
                 { data?.error && data.error.message
-                ? <Typography variant="body2">{ data.error.message }</Typography>
+                ? <Typography variant="body2" className={ styles.error }>{ data.error.message }</Typography>
                 : null
                 }
             </div>)
@@ -72,7 +76,7 @@ export default class App extends Component {
             <div className={ styles.container }>
                 <Link to="/corona-tracker/vaccinations" className={ styles.link1 }>Vaccinations</Link>
                 <Link to="/corona-tracker/manual" className={ styles.link2 }>Manual</Link>
-                <Typography variant="h1" className={ styles.headline }>Corona Tracker</Typography>
+                <h1 className={ styles.headline }>Corona Tracker</h1>
                 <Cards data={ data } />
                 <CountryPicker handleCountryChange={ this.handleCountryChange } country={ country }
                     handleDistrictChange={ this.handleDistrictChange } district={ district } setDistrict={ this.setDistrict }

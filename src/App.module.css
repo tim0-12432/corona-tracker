@@ -1,5 +1,24 @@
+:root {
+    --color-green: #8cb369;
+    --color-grey: #333533;
+    --color-red: #bc4b51;
+    --color-orange: #D2AC4B;
+    --color-dark: #0d1b2a;
+    --color-bg: #1b263b;
+    --color-light: #415a77;
+    --color-font: #e0e1dd;
+}
+
+::-webkit-scrollbar {
+    background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-dark);
+    border-radius: 15px;
+}
+
 body {
-    background: #dddddd;
+    background: var(--color-bg);
     font-family: "Roboto", serif;
 }
 .container {
@@ -15,6 +34,11 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 10.5vw;
+    color: var(--color-light);
+}
+.error {
+    margin-top: 20px !important;
+    color: var(--color-font);
 }
 footer {
     display: flex;
@@ -29,7 +53,7 @@ footer {
     bottom: 10px;
     right: 10px;
     font-weight: 600;
-    color: black;
+    color: var(--color-font);
     text-transform: uppercase;
     text-decoration: none;
     padding: 10px 20px;
@@ -38,7 +62,7 @@ footer {
     border: 3px solid #8dd35f;
 }
 .link1:hover, .link1:focus {
-    color: white;
+    color: var(--color-dark);
     background-color: #8dd35f;
 }
 
@@ -47,7 +71,7 @@ footer {
     bottom: 10px;
     left: 10px;
     font-weight: 600;
-    color: black;
+    color: var(--color-font);
     text-transform: uppercase;
     text-decoration: none;
     padding: 10px 20px;
@@ -56,7 +80,7 @@ footer {
     border: 3px solid #8dd35f;
 }
 .link2:hover, .link2:focus {
-    color: white;
+    color: var(--color-dark);
     background-color: #8dd35f;
 }
 

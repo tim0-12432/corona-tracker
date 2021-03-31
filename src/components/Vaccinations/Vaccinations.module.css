@@ -1,5 +1,5 @@
-body {
-    background: #ddd;
+h1 {
+    color: var(--color-font) !important;
 }
 .container {
     display: flex;
@@ -28,12 +28,14 @@ footer {
 }
 .card {
     margin: 0 2% !important;
+    background-color: var(--color-dark) !important;
+    color: var(--color-font) !important;
 }
 .vaccinated {
-    border-bottom: 10px solid rgba(255, 255, 0, .5);
+    border-bottom: 10px solid var(--color-orange);
 }
 .second {
-    border-bottom: 10px solid rgba(0, 255, 0, .5);
+    border-bottom: 10px solid var(--color-green);
 }
 .chartContainer {
     width: 100%;
@@ -43,13 +45,16 @@ footer {
     display: flex;
     justify-content: center;
     width: 85%;
+    background-color: var(--color-dark);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 .link {
     position: fixed;
     bottom: 10px;
     right: 10px;
     font-weight: 600;
-    color: black;
+    color: var(--color-font);
     text-transform: uppercase;
     text-decoration: none;
     padding: 10px 20px;
@@ -58,8 +63,11 @@ footer {
     border: 3px solid #8dd35f;
 }
 .link:hover, .link:focus {
-    color: white;
+    color: var(--color-dark);
     background-color: #8dd35f;
+}
+p {
+    color: var(--color-light);
 }
 
 @media (max-width: 770px) {

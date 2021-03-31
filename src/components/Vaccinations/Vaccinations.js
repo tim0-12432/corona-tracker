@@ -32,7 +32,7 @@ export default class Vaccinations extends Component {
     render() {
         const { data, daily, country } = this.state;
 
-        if (data.data === undefined || !data.data.vaccinated || country === "germany" || data.data.states === undefined) {
+        if (data && (data.data === undefined || !data.data.vaccinated || country === "germany" || data.data.states === undefined)) {
             return (<div className={ styles.container }>
                 <Loading />
             </div>)

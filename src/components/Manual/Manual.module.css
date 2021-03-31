@@ -1,6 +1,3 @@
-body {
-    background: #ddd;
-}
 .container {
     display: flex;
     justify-content: center;
@@ -16,6 +13,7 @@ body {
     align-items: flex-start;
     flex-direction: column;
     max-width: 60%;
+    color: var(--color-font);
 }
 .markdown h1 {
     width: 100%;
@@ -34,7 +32,7 @@ body {
     transition: .3s ease;
 }
 .markdown a:hover {
-    color: white;
+    color: var(--color-dark);
     background: #8dd35f;
     text-decoration: none;
     padding: 5px 10px;
@@ -46,7 +44,7 @@ body {
 .link, .github {
     position: fixed;
     font-weight: 600;
-    color: black;
+    color: var(--color-font);
     text-transform: uppercase;
     text-decoration: none;
     padding: 10px 20px;
@@ -64,7 +62,7 @@ body {
 }
 .link:hover, .link:focus,
 .github:hover, .github:focus {
-    color: white;
+    color: var(--color-dark);
     background-color: #8dd35f;
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Typography } from "@material-ui/core";
 
 import styles from "./Map.module.css";
 
@@ -12,9 +13,12 @@ const Map = ({ district }) => {
     }
 
     return (
-        <div className={ styles.container }>
-            <img src={ getSource() } alt="Heatmap of Corona incidences" className={ styles.image } />
-        </div>
+        <>
+            <Typography variant="h4">Heatmap of incidences</Typography>
+            <div className={ styles.container }>
+                <img src={ getSource() } alt="Heatmap of Corona incidences" className={ styles.image } />
+            </div>
+        </>
     );
 }
 

@@ -15,17 +15,17 @@ const Chart = ({ data, dailyData, country, district }) => {
             datasets: [{
                 data: dailyData.map(({ cases }) => cases),
                 label: "Infected",
-                borderColor: "#ff3333",
+                borderColor: "#bc4b51",
                 fill: true
             }, {
                 data: dailyData.map(({ recovered }) => recovered),
                 label: "Recovered",
-                borderColor: "#33ff33",
+                borderColor: "#8cb369",
                 fill: true
             }, {
                 data: dailyData.map(({ deaths }) => deaths),
                 label: "Deaths",
-                borderColor: "#333333",
+                borderColor: "#333533",
                 fill: true
             }] }}
         />)
@@ -41,9 +41,9 @@ const Chart = ({ data, dailyData, country, district }) => {
                     datasets: [{
                         label: "People",
                         backgroundColor: [
-                            "rgba(255, 0, 0, .5)",
-                            "rgba(0, 255, 0, .5)",
-                            "rgba(0, 0, 0, .5)"
+                            "#bc4b51",
+                            "#8cb369",
+                            "#333533"
                         ],
                         data: [
                             data.cases,
@@ -67,7 +67,7 @@ const Chart = ({ data, dailyData, country, district }) => {
                 { chartType === "line" ? lineChart : barChart }
             </div>
             <FormControl className={ styles.formControl }>
-                <Button variant="outlined" onClick={ (e) => {
+                <Button variant="outlined" classes={{ root: styles.btn }} onClick={ (e) => {
                     chartType === "line" ? setChartType("bar") : setChartType("line");
                 } }>{ chartType === "line" ? "Bar Chart" : "Line Chart" }</Button>
             </FormControl>
