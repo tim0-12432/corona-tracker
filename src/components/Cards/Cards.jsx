@@ -59,10 +59,10 @@ const Cards = ({ data }) => {
                     <CardContent>
                         <Typography gutterBottom>{ data.name ? data.name : "Germany" }</Typography>
                         <Typography variant="h6">
-                            Weekly Incidence:<br/><CountUp start={ 0 } end={ data.weekIncidence } duration={ 2.5 } separator="." />
+                            Weekly Incidence:<br/><CountUp start={ 0 } end={ data.weekIncidence } duration={ 2.5 } separator="." decimals={ 2 } decimal="," />
                         </Typography>
                         <Typography variant="h6">
-                            Cases / 100k:<br/><CountUp start={ 0 } end={ data.casesPer100k } duration={ 2.5 } separator="." />
+                            Cases / 100k:<br/><CountUp start={ 0 } end={ data.casesPer100k } duration={ 2.5 } separator="." decimals={ 2 } decimal="," />
                         </Typography>
                         <Typography>{ new Date(data.meta.lastUpdate).toDateString() }</Typography>
                         <Typography variant="body2">Additional Information</Typography>
