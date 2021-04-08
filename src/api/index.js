@@ -36,6 +36,10 @@ export const fetchData = async (country) => {
             }
         } catch (error) {
             console.error(error);
+            if (error.toString().indexOf("429") !== -1) {
+                return { error: { message: "Please take a break! You only have a limited amount of API calls!" } }
+            }
+
         }
     }
     else {
@@ -48,6 +52,10 @@ export const fetchData = async (country) => {
             }
         } catch (error) {
             console.error(error);
+            if (error.toString().indexOf("429") !== -1) {
+                return { error: { message: "Please take a break! You only have a limited amount of API calls!" } }
+            }
+
         }
     }
 };
@@ -88,6 +96,10 @@ export const fetchDailyData = async (country) => {
             }
         } catch (error) {
             console.error(error);
+            if (error.toString().indexOf("429") !== -1) {
+                return { error: { message: "Please take a break! You only have a limited amount of API calls!" } }
+            }
+
         }
     } else {
         try {
@@ -110,6 +122,10 @@ export const fetchDailyData = async (country) => {
             }
         } catch (error) {
             console.error(error);
+            if (error.toString().indexOf("429") !== -1) {
+                return { error: { message: "Please take a break! You only have a limited amount of API calls!" } }
+            }
+
         }
     }
 };
@@ -129,6 +145,9 @@ export const fetchStates = async () => {
         }
     } catch (error) {
         console.error(error);
+        if (error.toString().indexOf("429") !== -1) {
+            return { error: { message: "Please take a break! You only have a limited amount of API calls!" } }
+        }
     }
 };
 
@@ -153,6 +172,9 @@ export const fetchDistricts = async (text) => {
         }
     } catch (error) {
         console.error(error);
+        if (error.toString().indexOf("429") !== -1) {
+            return { error: { message: "Please take a break! You only have a limited amount of API calls!" } }
+        }
     }
 };
 
@@ -166,6 +188,9 @@ export const fetchVaccData = async () => {
         }
     } catch (error) {
         console.error(error);
+        if (error.toString().indexOf("429") !== -1) {
+            return { error: { message: "Please take a break! You only have a limited amount of API calls!" } }
+        }
     }
 };
 
@@ -179,6 +204,9 @@ export const fetchDailyVaccData = async () => {
         }
     } catch (error) {
         console.error(error);
+        if (error.toString().indexOf("429") !== -1) {
+            return { error: { message: "Please take a break! You only have a limited amount of API calls!" } }
+        }
     }
 };
 
@@ -192,5 +220,8 @@ export const fetchDailyCases = async () => {
         }
     } catch (error) {
         console.error(error);
+        if (error.toString().indexOf("429") !== -1) {
+            return { error: { message: "Please take a break! You only have a limited amount of API calls!" } }
+        }
     }
 };
