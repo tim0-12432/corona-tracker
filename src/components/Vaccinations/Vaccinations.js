@@ -35,6 +35,10 @@ export default class Vaccinations extends Component {
         if (data && (data.data === undefined || !data.data.vaccinated || country === "germany" || data.data.states === undefined)) {
             return (<div className={ styles.container }>
                 <Loading />
+                { data?.error && data.error.message
+                ? <Typography variant="body2" className={ styles.error }>{ data.error.message }</Typography>
+                : null
+                }
             </div>)
         }
         return (

@@ -11,6 +11,7 @@ const Projection = () => {
     const [data, setData] = useState({});
     const [daily, setDaily] = useState([]);
     const [projection, setProjection] = useState([]);
+    const [endDate, setEndDate] = useState("");
 
     useEffect(() => {
         const fetchApi = async () => {
@@ -26,9 +27,14 @@ const Projection = () => {
             const date = new Date(copy[copy.length - 1].date);
             for (let i = 0; i < (r > 1 ? 50 : 100); i++) {
                 if (copy[copy.length - 1].cases !== 0) {
+                    const projCases = parseInt(copy[copy.length - 1].cases * r);
+                    const projDate = new Date(date.setDate(date.getDate() + 1));
+                    if (endDate === "" && projCases === 0) {
+                        setEndDate(projDate);
+                    }
                     const object = {
-                        cases: parseInt(copy[copy.length - 1].cases * r),
-                        date: new Date(date.setDate(date.getDate() + 1)).toISOString()
+                        cases: projCases,
+                        date: projDate.toISOString()
                     };
                     copy.push(object);
                 }
@@ -50,7 +56,8 @@ const Projection = () => {
             }] }}
             options={{
                 legend: { display: false },
-                title: { display: true, text: `Current reproduction rate (R-value): ${data.r.value}` }
+                title: { display: true, text: `Current reproduction rate (R-value): ${data.r.value}
+                    ${endDate === "" ? "" : `\nEstimated pandemic ending in ${Math.ceil(Math.abs(endDate - new Date(Date.now()))/(1000*60*60*24))} days: ${endDate.toDateString()} (Zero cases)`}` }
             }}
         />)
         : <Loading />

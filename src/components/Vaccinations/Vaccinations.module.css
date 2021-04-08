@@ -49,6 +49,10 @@ footer {
     padding: 10px 20px;
     border-radius: 10px;
 }
+.error {
+    margin-top: 20px !important;
+    color: var(--color-font);
+}
 .link {
     position: fixed;
     bottom: 10px;
