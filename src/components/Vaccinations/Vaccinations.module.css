@@ -48,6 +48,7 @@ footer {
     background-color: var(--color-dark);
     padding: 10px 20px;
     border-radius: 10px;
+    margin: 20px 0;
 }
 .error {
     margin-top: 20px !important;

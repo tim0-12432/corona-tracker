@@ -6,6 +6,7 @@ import Loading from "./../Loading/Loading";
 import Selector from "./../CountryPicker/Selector";
 import Cards from "./Cards";
 import Chart from "./Chart";
+import Projection from "./Projection";
 import styles from "./Vaccinations.module.css";
 
 import { fetchVaccData, fetchDailyVaccData } from "./../../api";
@@ -48,6 +49,7 @@ export default class Vaccinations extends Component {
                 <Selector country={ country } handleCountryChange={ this.handleCountryChange } />
                 <Cards data={ country === "DE" ? data.data : data.data.states[country] } meta={ data.meta } />
                 <Chart dailyData={ daily } country={ country } />
+                <Projection dailyData={ daily } />
                 <footer>
                     <Typography variant="body2" className={ styles.footer }>All values are provided by the Robert Koch-Institut</Typography>
                     <Typography variant="body2" className={ styles.footer }>API for better usage by Marlon Lueckert (m.lueckert@me.com)</Typography>
