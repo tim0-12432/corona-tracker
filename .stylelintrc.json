@@ -1,0 +1,42 @@
+{
+    "extends": "stylelint-config-standard",
+    "plugins": [
+        "stylelint-order"
+    ],
+    "rules": {
+        "indentation": [
+            4,
+            {
+                "severity": "warning"
+            }
+        ],
+        "no-missing-end-of-source-newline": null,
+        "selector-list-comma-newline-after": [
+            "always",
+            {
+                "severity": "warning"
+            }
+        ],
+        "rule-empty-line-before": [
+            "always",
+            {
+                "severity": "warning"
+            }
+        ],
+        "no-descending-specificity": [
+            true,
+            {
+                "severity": "warning"
+            }
+        ],
+        "number-leading-zero": null
+    },
+    "ignoreFiles": ["dist/**", "node_modules/**"],
+    "reportNeedlessDisables": [true],
+    "reportDescriptionDisables": [
+        true,
+        {
+            "severity": "warning"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+name: Code-Linting
+
+on: [push, pull_request]
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: git checkout
+        uses: actions/checkout@v2
+
+      - name: setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 15.x
+
+      - name: install modules
+        run: npm ci
+
+      - name: esLint
+        run: npm run lint:js
+
+      - name: styleLint
+        run: npm run lint:css
+
+      - uses: xt0rted/markdownlint-problem-matcher@v1
+      - name: markdownLint
+        uses: docker://avtodev/markdown-lint:v1
+        with:
+            args: **.md
