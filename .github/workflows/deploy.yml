@@ -28,12 +28,8 @@ jobs:
         env:
           CI: false
 
-      - name: github deployment
-        uses: actions/setup-node@v2
-        with:
-          node-version: 15.x
       - name: deploy
-        run: |
-          git config --global user.name "tim0-12432"
-          git config --global user.email "tim0-12432@users.noreply.${GITHUB_DOMAIN:-github.com}"
-          npm run deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: built-page
+          folder: build
