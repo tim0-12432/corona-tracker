@@ -28,4 +28,4 @@ jobs:
       - name: markdownLint
         uses: docker://avtodev/markdown-lint:v1
         with:
-            args: "-c .markdownlint.json docs/*.md"
+            args: "-c .markdownlintrc.json docs/*.md"

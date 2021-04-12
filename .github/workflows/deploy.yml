@@ -19,10 +19,6 @@ jobs:
       - name: clean install
         run: npm ci
 
-      - name: Node Build
-        uses: actions/setup-node@v2
-        with:
-          node-version: 15.x
       - name: build
         run: npm run build
         env:
