@@ -28,14 +28,12 @@ jobs:
         env:
           CI: false
 
-      - name: configure git user
-        run: |
-          git config --global user.name "tim0-12432"
-          git config --global user.email "${GITHUB_ACTOR}@users.noreply.${GITHUB_DOMAIN:-github.com}"
-
       - name: github deployment
         uses: actions/setup-node@v2
         with:
           node-version: 15.x
       - name: deploy
-        run: npm run deploy
+        run: |
+          git config --global user.name "tim0-12432"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.${GITHUB_DOMAIN:-github.com}"
+          npm run deploy
