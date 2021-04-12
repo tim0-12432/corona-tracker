@@ -48,7 +48,16 @@ footer {
     background-color: var(--color-dark);
     padding: 10px 20px;
     border-radius: 10px;
-    margin: 20px 0;
+    margin: 40px 0 5px 0;
+}
+.formControl {
+    width: 30%;
+    margin-bottom: 30px !important;
+    margin-top: 15px !important;
+}
+.btn {
+    color: var(--color-light) !important;
+    border-color: var(--color-light) !important;
 }
 .error {
     margin-top: 20px !important;
@@ -91,5 +100,8 @@ p {
     }
     .card {
         margin: 2% 0 !important;
+    }
+    .formControl {
+        width: 80%;
     }
 }
