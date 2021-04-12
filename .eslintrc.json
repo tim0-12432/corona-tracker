@@ -7,6 +7,7 @@
         "eslint:recommended",
         "plugin:react/recommended"
     ],
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true,
@@ -23,6 +24,9 @@
         "indent": [
             "warn",
             "tab"
+        ],
+        "no-mixed-spaces-and-tabs": [
+            "warn"
         ],
         "linebreak-style": [
             "off",

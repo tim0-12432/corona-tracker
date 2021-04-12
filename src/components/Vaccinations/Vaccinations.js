@@ -13,48 +13,48 @@ import { fetchVaccData, fetchDailyVaccData } from "./../../api";
 
 export default class Vaccinations extends Component {
     state = {
-        data: {},
-        daily: [],
-        country: "germany"
+    	data: {},
+    	daily: [],
+    	country: "germany"
     }
 
     async componentDidMount() {
-        this.setState({ country: "DE" });
-        const fetchedData = await fetchVaccData();
-        const fetchedDailyData = await fetchDailyVaccData();
-        this.setState({ data: fetchedData, daily: fetchedDailyData });
+    	this.setState({ country: "DE" });
+    	const fetchedData = await fetchVaccData();
+    	const fetchedDailyData = await fetchDailyVaccData();
+    	this.setState({ data: fetchedData, daily: fetchedDailyData });
     }
 
     handleCountryChange = async (country) => {
-        this.setState({ country: country });
-        console.log(country);
+    	this.setState({ country: country });
+    	console.log(country);
     };
 
     render() {
-        const { data, daily, country } = this.state;
+    	const { data, daily, country } = this.state;
 
-        if (data && (data.data === undefined || !data.data.vaccinated || country === "germany" || data.data.states === undefined)) {
-            return (<div className={ styles.container }>
-                <Loading />
-                { data?.error && data.error.message
-                ? <Typography variant="body2" className={ styles.error }>{ data.error.message }</Typography>
-                : null
-                }
-            </div>)
-        }
-        return (
-            <div className={ styles.container }>
-                <Link to="/corona-tracker/" className={ styles.link }>Corona Tracker</Link>
-                <Typography variant="h1" className={ styles.headline }>Vaccinations</Typography>
-                <Selector country={ country } handleCountryChange={ this.handleCountryChange } />
-                <Cards data={ country === "DE" ? data.data : data.data.states[country] } meta={ data.meta } />
-                <Chart dailyData={ daily } country={ country } />
-                <Projection dailyData={ daily } />
-                <footer>
-                    <Typography variant="body2" className={ styles.footer }>All values are provided by the Robert Koch-Institut</Typography>
-                    <Typography variant="body2" className={ styles.footer }>API for better usage by Marlon Lueckert (m.lueckert@me.com)</Typography>
-                </footer>
-            </div>
-        );
-    };
+    	if (data && (data.data === undefined || !data.data.vaccinated || country === "germany" || data.data.states === undefined)) {
+    		return (<div className={ styles.container }>
+    			<Loading />
+    			{ data?.error && data.error.message
+    				? <Typography variant="body2" className={ styles.error }>{ data.error.message }</Typography>
+    				: null
+    			}
+    		</div>);
+    	}
+    	return (
+    		<div className={ styles.container }>
+    			<Link to="/corona-tracker/" className={ styles.link }>Corona Tracker</Link>
+    			<Typography variant="h1" className={ styles.headline }>Vaccinations</Typography>
+    			<Selector country={ country } handleCountryChange={ this.handleCountryChange } />
+    			<Cards data={ country === "DE" ? data.data : data.data.states[country] } meta={ data.meta } />
+    			<Chart dailyData={ daily } country={ country } />
+    			<Projection dailyData={ daily } />
+    			<footer>
+    				<Typography variant="body2" className={ styles.footer }>All values are provided by the Robert Koch-Institut</Typography>
+    				<Typography variant="body2" className={ styles.footer }>API for better usage by Marlon Lueckert (m.lueckert@me.com)</Typography>
+    			</footer>
+    		</div>
+    	);
+    }
 }
