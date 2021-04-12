@@ -30,7 +30,7 @@ jobs:
 
       - name: configure git user
         run: |
-          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.name "tim0-12432"
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.${GITHUB_DOMAIN:-github.com}"
 
       - name: github deployment
