@@ -1,0 +1,43 @@
+name: Deploying
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploying:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: git checkout main
+        uses: actions/checkout@v2
+
+      - name: node install
+        uses: actions/setup-node@v2
+        with:
+          node-version: 15.x
+      - name: clean install
+        run: npm ci
+
+      - name: Node Build
+        uses: actions/setup-node@v2
+        with:
+          node-version: 15.x
+      - name: build
+        run: npm run build
+        env:
+          CI: false
+
+      - name: configure git user
+        run: |
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.${GITHUB_DOMAIN:-github.com}"
+
+      - name: github deployment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 15.x
+      - name: deploy
+        run: npm run deploy
