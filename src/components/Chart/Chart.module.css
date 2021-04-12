@@ -6,24 +6,29 @@
     padding: 10px 20px;
     border-radius: 10px;
 }
+
 .formControl {
     width: 30%;
     margin-bottom: 30px !important;
     margin-top: 15px !important;
 }
+
 .btn {
     color: var(--color-light) !important;
     border-color: var(--color-light) !important;
 }
+
 h4 {
     color: var(--color-font);
     margin: 20px 0 !important;
 }
 
 @media (max-width: 770px) {
+
     .container {
         width: 100%;
     }
+
     .formControl {
         width: 80%;
     }

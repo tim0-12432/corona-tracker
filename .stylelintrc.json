@@ -31,7 +31,7 @@
         ],
         "number-leading-zero": null
     },
-    "ignoreFiles": ["dist/**", "node_modules/**"],
+    "ignoreFiles": ["build/**", "node_modules/**"],
     "reportNeedlessDisables": [true],
     "reportDescriptionDisables": [
         true,

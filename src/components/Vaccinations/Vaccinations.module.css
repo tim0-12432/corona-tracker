@@ -1,6 +1,7 @@
 h1 {
     color: var(--color-font) !important;
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -10,11 +11,13 @@ h1 {
     width: 100%;
     overflow-x: hidden;
 }
+
 .headline {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 10.5vw;
 }
+
 footer {
     display: flex;
     justify-content: center;
@@ -23,24 +26,30 @@ footer {
     margin: 30px 0;
     padding: 0 20px;
 }
+
 .cardContainer {
     margin: 50px 0;
 }
+
 .card {
     margin: 0 2% !important;
     background-color: var(--color-dark) !important;
     color: var(--color-font) !important;
 }
+
 .vaccinated {
     border-bottom: 10px solid var(--color-orange);
 }
+
 .second {
     border-bottom: 10px solid var(--color-green);
 }
+
 .chartContainer {
     width: 100%;
     margin: 20px 0;
 }
+
 .chartBigContainer {
     display: flex;
     justify-content: center;
@@ -50,19 +59,23 @@ footer {
     border-radius: 10px;
     margin: 40px 0 5px 0;
 }
+
 .formControl {
     width: 30%;
     margin-bottom: 30px !important;
     margin-top: 15px !important;
 }
+
 .btn {
     color: var(--color-light) !important;
     border-color: var(--color-light) !important;
 }
+
 .error {
     margin-top: 20px !important;
     color: var(--color-font);
 }
+
 .link {
     position: fixed;
     bottom: 10px;
@@ -76,31 +89,40 @@ footer {
     border-radius: 5px;
     border: 3px solid #8dd35f;
 }
-.link:hover, .link:focus {
+
+.link:hover,
+.link:focus {
     color: var(--color-dark);
     background-color: #8dd35f;
 }
+
 p {
     color: var(--color-light);
 }
 
 @media (max-width: 770px) {
+
     .container {
         margin: 0;
     }
+
     .chartBigContainer {
         width: 100%;
     }
+
     .headline {
         font-weight: 700;
         font-size: 7vw !important;
     }
+
     footer {
         align-items: flex-start;
     }
+
     .card {
         margin: 2% 0 !important;
     }
+
     .formControl {
         width: 80%;
     }

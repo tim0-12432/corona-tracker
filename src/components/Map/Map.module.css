@@ -7,12 +7,14 @@
     padding: 10px 20px;
     border-radius: 10px;
 }
+
 .image {
     max-height: 100vh;
     max-width: 100%;
 }
 
 @media (max-width: 770px) {
+
     .container {
         width: 100%;
     }

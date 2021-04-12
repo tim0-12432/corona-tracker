@@ -1,25 +1,31 @@
 .container {
     margin: 50px 0;
 }
+
 .card {
     margin: 0 2% !important;
     background-color: var(--color-dark) !important;
     color: var(--color-font) !important;
 }
+
 .infected {
     border-bottom: 10px solid var(--color-red);
 }
+
 .recovered {
     border-bottom: 10px solid var(--color-green);
 }
+
 .deaths {
     border-bottom: 10px solid var(--color-grey);
 }
+
 p {
     color: var(--color-light);
 }
 
 @media (max-width: 770px) {
+
     .card {
         margin: 2% 0 !important;
     }

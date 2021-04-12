@@ -7,6 +7,7 @@
     width: 100%;
     overflow-x: hidden;
 }
+
 .markdown {
     display: flex;
     justify-content: center;
@@ -15,15 +16,20 @@
     max-width: 60%;
     color: var(--color-font);
 }
+
 .markdown h1 {
     width: 100%;
     text-align: center;
 }
-.markdown h2, .markdown h3 {
+
+.markdown h2,
+.markdown h3 {
     color: #8dd35f;
     text-decoration: underline;
 }
-.markdown a, .markdown a:visited {
+
+.markdown a,
+.markdown a:visited {
     color: #8dd35f;
     background: none;
     padding: 0;
@@ -31,17 +37,21 @@
     text-decoration: none;
     transition: .3s ease;
 }
+
 .markdown a:hover {
     color: var(--color-dark);
     background: #8dd35f;
     text-decoration: none;
     padding: 5px 10px;
 }
+
 .markdown img {
     max-width: 100%;
     border-radius: 10px;
 }
-.link, .github {
+
+.link,
+.github {
     position: fixed;
     font-weight: 600;
     color: var(--color-font);
@@ -52,27 +62,35 @@
     border-radius: 5px;
     border: 3px solid #8dd35f;
 }
+
 .link {
     top: 10px;
     left: 10px;
 }
+
 .github {
     top: 10px;
     right: 10px;
 }
-.link:hover, .link:focus,
-.github:hover, .github:focus {
+
+.link:hover,
+.link:focus,
+.github:hover,
+.github:focus {
     color: var(--color-dark);
     background-color: #8dd35f;
 }
 
 @media (max-width: 770px) {
+
     .container {
         margin: 0;
     }
+
     .markdown {
         max-width: 100%;
     }
+
     .markdown h1 {
         margin-top: 55px;
     }
